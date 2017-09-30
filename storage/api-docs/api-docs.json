@@ -1,0 +1,58 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "iShop API",
+        "contact": {
+            "name": "Pek Ratanak",
+            "url": "https://www.google.com"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost",
+    "basePath": "",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/api/home": {
+            "get": {
+                "tags": [
+                    "home"
+                ],
+                "summary": "Display a listing of the resource.",
+                "description": "Returns dashboard overview.",
+                "operationId": "api.home.index",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Dashboard overview."
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Error": {
+            "required": [
+                "code",
+                "message"
+            ],
+            "properties": {
+                "code": {
+                    "description": "Class ApiController",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "description": "Class ApiController",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
